@@ -12,7 +12,7 @@ echo $tekst."<hr>";
 
 <!--Przykład 6.13-->
 <!DOCTYPE HTML>
-<html>
+<html lang="pl">
 <head>
     <title>Skrypt PHP</title>
     <meta charset="UTF-8">

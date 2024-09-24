@@ -29,7 +29,7 @@ $obecny = true; // Boolean
 $kwotaPodatku = 10.5; //Float
 
 var_dump($kwotaPodatku);
-
+echo "<hr>";
 /* --- Dodawanie zmiennej do łańcucha -- */
 
 // Double quotes can be used to add variables to strings
