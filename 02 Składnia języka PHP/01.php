@@ -52,7 +52,7 @@ echo "tutaj pojawi się wartość zmiennej: $haslo<br>";
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Moja strona PHP</title>
+    <title>Moja strona PHP<?php echo " - to jest coś co wzbudza podziw." ?></title>
 </head>
 <body>
 <!-- Można umieszczać kod php wewnątrz znaczników HTML -->
