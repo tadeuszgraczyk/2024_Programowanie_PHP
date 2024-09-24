@@ -45,13 +45,14 @@ $tab_asoc = array(
     "hasło3"=>"naleśnik Witolda"
 );
 echo $tab_asoc["hasło3"]."<br>";
-$osoba = array("nazwisko"=>"Kowalski", "imię"=>"Jan", "wiek"=>17);
+
+$osoba = array("nazwisko"=>"Kowalski", "imie"=>"Jan", "wiek"=>17);
 echo "zjadł ".$osoba["nazwisko"];
 
 echo "<hr>";
 
 $osoba["nazwisko"]="Kowalski";
-$osoba["imię"]="Jan";
+$osoba["imie"]="Jan";
 $osoba["wiek"]=17;
 echo $osoba["wiek"]+1;
 
@@ -61,15 +62,15 @@ echo "<hr>";
 ----------------------------------*/
 $dane = array(
     array("nazwisko"=>"Kowalski",
-        "imię"=>"Jan",
+        "imie"=>"Jan",
         "wiek"=>27),
     array("nazwisko"=>"Nowak",
-        "imię"=>"Paweł",
+        "imie"=>"Paweł",
         "wiek"=>24),
     array("nazwisko"=>"Górka",
-        "imię"=>"Tomasz",
+        "imie"=>"Tomasz",
         "wiek"=>29)
 );
-echo $dane[2]["imię"];
+echo $dane[2]["imie"];
 
 echo "<hr>";
