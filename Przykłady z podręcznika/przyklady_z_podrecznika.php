@@ -146,10 +146,15 @@ echo "<br/>teraz $tekst <br/>";
 Typ array
  --------------------------------------------------
 <?php
-    $tab=array("t1","t2","t3","t4");
-    echo $tab[0];
-?>
+$tab=array("t1","t2","t3","t4");
+echo $tab[0];
 
+echo "<pre>";
+print_r($tab);
+
+var_dump($tab);
+echo "</pre>";
+?>
 Typ array 6.15
 --------------------------------------------------
 <?php
