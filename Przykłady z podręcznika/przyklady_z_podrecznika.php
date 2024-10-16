@@ -96,7 +96,8 @@ Użycie znaków cudzysłowu 6.11
 ------------------------------------------
 <?php
      $z="to jest tekst";
-     echo "$z";
+     echo "$z <br>";
+     echo '$z <br>';
 ?>
 
 Użycie składni heredoc 6.12
@@ -140,7 +141,7 @@ Tutaj rozpoczyna się napis $napis
 i coś jeszcze
 PC;
 echo $tekst;
-echo "<br/>teraz $tekst <br/>";
+echo "<br>teraz $tekst <br>";
 ?>
 
 Typ array
