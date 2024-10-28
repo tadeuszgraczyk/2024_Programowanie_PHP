@@ -1,10 +1,15 @@
 <?php
-$tab=array("t1","t2","t3","t4");
-echo $tab[0];
+$dane = array(
+    array("nazwisko"=>"Kowalski",
+        "imię"=>"Jan",
+        "wiek"=>27),
+    array("nazwisko"=>"Nowak",
+        "imię"=>"Paweł",
+        "wiek"=>24),
+    array("nazwisko"=>"Górka",
+        "imię"=>"Tomasz",
+        "wiek"=>29)
+);
+echo $dane[2]["imię"];
 
-echo "<pre>";
-print_r($tab);
-
-var_dump($tab);
-echo "</pre>";
 ?>
