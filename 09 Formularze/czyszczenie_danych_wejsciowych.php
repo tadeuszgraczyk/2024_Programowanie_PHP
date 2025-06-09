@@ -1,13 +1,13 @@
 <?php
-/* --- Czyszczenie danych wejściowych -- */
+/* --- Czyszczenie danych wejściowych --- */
 
 /*
   Dane przesyłane przez formularz nie są domyślnie czyszczone. Możemy ręcznie wyczyścić dane za pomocą odpowiednich metod.
 */
 
 if (isset($_POST['submit'])) {
-    // $name = $_POST['email'];
-    // $email = $_POST['email'];
+    $name = $_POST['email'];
+    $email = $_POST['email'];
 
     // htmlspecialchars() - Konwertuje specjalne znaki na encje HTML
     // $name = htmlspecialchars($_POST['name']);
@@ -33,14 +33,16 @@ if (isset($_POST['submit'])) {
 <!-- php_self może być używane do ochrony przed XSS -->
 <form action="<?php echo htmlspecialchars($_SERVER['PHP_SELF']); ?>" method="POST">
     <div>
-        <label>Imię: </label>
+        <label>Imię:
         <input type="text" name="name">
+        </label>
     </div>
     <br>
     <?php echo $email; ?>
     <div>
-        <label>Email: </label>
+        <label>Email:
         <input type="email" name="email">
+        </label>
     </div>
     <br>
     <input type="submit" name="submit" value="Wyślij">
