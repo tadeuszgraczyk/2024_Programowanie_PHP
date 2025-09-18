@@ -35,7 +35,7 @@ echo "<hr>";
 // Double quotes can be used to add variables to strings
 echo "$nazwa ma $wiek szczęśliwych lat przed sobą.<br>";
 
-// Jeszcze lepiej zrobić to tak (szczególnie jeśli używałeś takiego zapisu w JS)
+// Jeszcze lepiej zrobić to tak (szczególnie jeśli używałeś takiego zapisu w JS) - zapis niezalecany od wersji 8.2
 echo "${nazwa} ma ${wiek} szczęśliwych lat przed sobą.<br>";
 
 // łączenie łańcuchów znaków
