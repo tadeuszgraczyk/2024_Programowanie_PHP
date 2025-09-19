@@ -24,7 +24,7 @@ if (isset($_POST['submit'])) {
         // Ustawienie zmiennej sesji
         $_SESSION['username'] = $username;
         // Przekierowanie użytkownika na inną stronę
-        header('Location: /php-crash/extras/dashboard.php');
+        header('Location: /extras/users.txt');
     } else {
         echo 'Niepoprawna nazwa użytkownika lub hasło';
     }
