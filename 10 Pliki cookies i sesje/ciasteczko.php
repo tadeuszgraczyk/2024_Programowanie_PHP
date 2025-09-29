@@ -11,7 +11,7 @@ gdy użytkownik ponownie odwiedzi stronę.
 // Ponieważ ciasteczka są przechowywane po stronie klienta, nie należy w nich przechowywać danych wrażliwych. Sesje są lepszym wyborem do przechowywania takich danych.
 
 // Ustawienie ciasteczka
-setcookie('name', 'Brad', time() + 86400 * 30); // 86400 = 1 dzień
+setcookie('name', 'Brad', time() +   24 * 60 * 60); // 86400 = 1 dzień
 
 // echo time();
 
