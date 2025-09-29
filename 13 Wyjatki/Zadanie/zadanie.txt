@@ -1,0 +1,6 @@
+Napisz kod html/php strony, na której użytkownik wpisze liczbę naturalną i otrzyma jeden z komunikatów:
+- "Nie ma miesiąca o podanym numerze"
+- "Dzisiaj mamy miesiąc o podanym numerze"
+- "Podałeś nieprawidłowo numer aktualnego miesiąca"
+W skrypcie zastosuj obsługę wyjątków.
+ 
