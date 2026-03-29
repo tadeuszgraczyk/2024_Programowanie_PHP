@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materiały dydaktyczne - Typy danych w języku PHP</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card {
+      margin-bottom: 20px;
+      border-left: 4px solid #0d6efd;
+    }
+    .card-header {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+    pre {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      margin: 15px 0;
+    }
+    table th, table td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+<div class="container mt-4">
+  <!-- Temat: Typy danych w języku PHP -->
+  <div class="card">
+    <div class="card-header">
+      49. Typy danych w języku PHP
+    </div>
+    <div class="card-body">
+      <p>
+        W języku PHP istnieje wiele wbudowanych typów danych, które umożliwiają przechowywanie różnych rodzajów informacji. PHP jest językiem słabo typowanym, co oznacza, że nie wymaga jawnego deklarowania typu zmiennej. Typ zmiennej jest określany automatycznie na podstawie przypisanej wartości.
+      </p>
+
+      <h5 class="mt-3">Podstawowe typy danych w PHP:</h5>
+      <p>
+        PHP obsługuje następujące typy danych:
+      </p>
+
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Typ danych</th>
+          <th>Opis</th>
+          <th>Przykład</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><code>boolean</code></td>
+          <td>Przechowuje wartości logiczne: <code>true</code> lub <code>false</code>.</td>
+          <td><code>$czyZalogowany = true;</code></td>
+        </tr>
+        <tr>
+          <td><code>integer</code></td>
+          <td>Przechowuje liczby całkowite.</td>
+          <td><code>$wiek = 25;</code></td>
+        </tr>
+        <tr>
+          <td><code>float</code></td>
+          <td>Przechowuje liczby zmiennoprzecinkowe.</td>
+          <td><code>$cena = 19.99;</code></td>
+        </tr>
+        <tr>
+          <td><code>string</code></td>
+          <td>Przechowuje łańcuchy znaków.</td>
+          <td><code>$imie = "Anna";</code></td>
+        </tr>
+        <tr>
+          <td><code>array</code></td>
+          <td>Przechowuje kolekcje wartości w postaci tablic.</td>
+          <td><code>$owoce = array("jabłko", "banan");</code></td>
+        </tr>
+        <tr>
+          <td><code>object</code></td>
+          <td>Przechowuje instancje klas.</td>
+          <td><code>$osoba = new Osoba();</code></td>
+        </tr>
+        <tr>
+          <td><code>NULL</code></td>
+          <td>Reprezentuje brak wartości.</td>
+          <td><code>$zmienna = NULL;</code></td>
+        </tr>
+        <tr>
+          <td><code>resource</code></td>
+          <td>Przechowuje odniesienia do zasobów zewnętrznych, np. połączenia z bazą danych.</td>
+          <td><code>$polaczenie = mysqli_connect(...);</code></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h5 class="mt-3">Przykłady użycia typów danych:</h5>
+      <pre><code class="language-php">&lt;?php
+    // Boolean
+    $czyAktywny = true;
+    var_dump($czyAktywny); // bool(true)
+
+    // Integer
+    $liczba = 42;
+    var_dump($liczba); // int(42)
+
+    // Float
+    $cena = 12.50;
+    var_dump($cena); // float(12.5)
+
+    // String
+    $nazwa = "PHP";
+    var_dump($nazwa); // string(3) "PHP"
+
+    // Array
+    $kolory = array("czerwony", "zielony", "niebieski");
+    var_dump($kolory);
+    /* array(3) {
+      [0]=>
+      string(7) "czerwony"
+      [1]=>
+      string(7) "zielony"
+      [2]=>
+      string(7) "niebieski"
+    } */
+
+    // Object
+    class Osoba {
+        public $imie;
+        public function __construct($imie) {
+            $this->imie = $imie;
+        }
+    }
+    $osoba = new Osoba("Jan");
+    var_dump($osoba);
+    /* object(Osoba)#1 (1) {
+      ["imie"]=>
+      string(3) "Jan"
+    } */
+
+    // NULL
+    $brakujacaWartosc = NULL;
+    var_dump($brakujacaWartosc); // NULL
+?&gt;</code></pre>
+
+      <h5 class="mt-3">Konwersja typów:</h5>
+      <p>
+        PHP umożliwia automatyczną konwersję typów (tzw. <em>type juggling</em>), ale można również wymusić konwersję jawną za pomocą funkcji takich jak <code>intval()</code>, <code>floatval()</code>, <code>strval()</code> lub poprzez rzutowanie.
+      </p>
+      <pre><code class="language-php">&lt;?php
+    $liczbaTekst = "123";
+    $liczba = (int)$liczbaTekst; // Rzutowanie na integer
+    var_dump($liczba); // int(123)
+
+    $tekst = "123.45";
+    $float = floatval($tekst); // Konwersja na float
+    var_dump($float); // float(123.45)
+?&gt;</code></pre>
+
+      <h5 class="mt-3">Sprawdzanie typu zmiennej:</h5>
+      <p>
+        Aby sprawdzić typ zmiennej, można użyć funkcji <code>gettype()</code> lub <code>var_dump()</code>.
+      </p>
+      <pre><code class="language-php">&lt;?php
+    $zmienna = 3.14;
+    echo gettype($zmienna); // double (w nowszych wersjach PHP: float)
+    var_dump($zmienna); // float(3.14)
+?&gt;</code></pre>
+
+      <div class="alert alert-info">
+        <strong>Wskazówka:</strong> Używaj funkcji <code>var_dump()</code> do debugowania, aby zobaczyć typ i wartość zmiennej.
+      </div>
+
+      <h5 class="mt-3">Podsumowanie:</h5>
+      <p>
+        Zrozumienie typów danych w PHP jest kluczowe dla efektywnego programowania. Dzięki elastyczności PHP, programiści mogą łatwo manipulować danymi i dostosowywać je do swoich potrzeb.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

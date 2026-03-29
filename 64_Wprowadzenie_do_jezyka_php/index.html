@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Materiały dydaktyczne - PHP</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card {
+      margin-bottom: 20px;
+      border-left: 4px solid #0d6efd;
+    }
+    .card-header {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+<div class="container mt-4">
+  <!-- Temat: Wprowadzenie do PHP -->
+  <div class="card">
+    <div class="card-header">
+      Wprowadzenie do języka PHP
+    </div>
+    <div class="card-body">
+      <p>
+        PHP to współczesny skryptowy język programowania dedykowany głównie dla rozwiązań webowych, którego pierwsza wersja została utworzona w 1994 roku przez <strong>Rasmusa Lerdorfa</strong>. Początkowo był to zestaw prostych <strong>Common Gateway Interface (CGI)</strong>, umożliwiających łączenie mechanizmów generowania stron HTML z kodem zaimplementowanym w języku C.
+      </p>
+      <p>
+        Wraz z kolejnymi wydaniami języka (<strong>PHP 3 w roku 1998, PHP 4 w roku 1999, PHP 5 w roku 2004</strong>) był on wzbogacany o kolejne konstrukcje językowe, w tym koncepty programowania obiektowego. W 2015 roku wydana została wersja 7, w której całkowicie przeprojektowano mechanizmy <strong>runtime'u</strong>, zwiększając w ten sposób znacząco wydajność aplikacji opartych o język PHP. Pełną dokumentację języka znajdziesz na stronie <a href="https://www.php.net" target="_blank">www.php.net</a>.
+      </p>
+      <p>
+        Na przestrzeni lat język ten został obudowany szeregiem dodatkowych rozwiązań, wspomagających i upraszczających pracę developerów. Starsze aplikacje bardzo często korzystały więc z repozytoriów <strong>PEAR</strong> oraz <strong>PECL</strong>, obecnie sięga się bardzo często po rozwiązania m.in. typu <strong>Composer</strong> i powiązane z nim repozytorium <strong>Packagist</strong>.
+      </p>
+      <div class="alert alert-info">
+        <strong>PHP nie jest martwy:</strong> to język nr 1 w świecie stron WWW.
+      </div>
+      <p>
+        Według raportu <a href="https://w3techs.com" target="_blank">W3Techs.com</a> na temat najczęściej używanych języków programowania do tworzenia stron internetowych, PHP jest używany przez ogromną większość stron internetowych na całym świecie. PHP nawet nie ma znaczącego konkurenta, ponieważ drugi <strong>ASP.NET</strong> zyskuje nieco powyżej 10%. Można powiedzieć, że PHP jest prawie osiem razy bardziej popularny niż ASP.NET.
+      </p>
+      <p>
+        O tym, jak kształtują się poszczególne trendy, możemy się przekonać ze statystyk prezentowanych na stronie <a href="https://w3techs.com" target="_blank">W3Techs.com</a>.
+      </p>
+    </div>
+  </div>
+
+  <!-- Temat: Zdarzenia elementów formularza -->
+  <div class="card">
+    <div class="card-header">
+      48. Zdarzenia elementów formularza
+    </div>
+    <div class="card-body">
+      <p>
+        W języku PHP, podobnie jak w innych technologiach webowych, kluczową rolę odgrywają <strong>zdarzenia związane z elementami formularza</strong>. Są to mechanizmy, które umożliwiają interakcję użytkownika ze stroną internetową, np. poprzez kliknięcie przycisku, wprowadzenie tekstu, wybór opcji z listy rozwijanej czy zaznaczenie checkboxa.
+      </p>
+      <p>
+        Zdarzenia te są obsługiwane po stronie serwera, co oznacza, że po wysłaniu formularza (np. za pomocą metody <code>POST</code> lub <code>GET</code>), dane są przetwarzane przez skrypt PHP. Przykładowe zdarzenia to:
+      </p>
+      <ul>
+        <li><strong>Wysyłanie formularza:</strong> Użytkownik kliknięciem przycisku <code>type="submit"</code> wysyła dane do serwera.</li>
+        <li><strong>Wybór opcji:</strong> Zmiana wartości w polu <code>select</code> lub zaznaczenie <code>radio button</code>.</li>
+        <li><strong>Wprowadzanie tekstu:</strong> Zdarzenia związane z polami tekstowymi, np. <code>onchange</code> lub <code>oninput</code> (obsługiwane również po stronie klienta za pomocą JavaScript).</li>
+      </ul>
+      <p>
+        W PHP, dane z formularza są dostępne w tablicach superglobalnych: <code>$_POST</code>, <code>$_GET</code> oraz <code>$_REQUEST</code>. Przykładowo, aby pobrać wartość pola o nazwie <code>username</code>, używamy:
+      </p>
+      <pre><code class="language-php">$username = $_POST['username'];</code></pre>
+      <p>
+        Ważnym aspektem jest również <strong>walidacja danych</strong>, która chroni aplikację przed błędami oraz atakami, takimi jak SQL Injection czy Cross-Site Scripting (XSS). Do walidacji można używać funkcji wbudowanych, np. <code>filter_var()</code> lub bibliotek zewnętrznych.
+      </p>
+      <div class="alert alert-warning">
+        <strong>Uwaga!</strong> Zawsze sprawdzaj, czy dane przesłane z formularza są poprawne i bezpieczne przed ich przetworzeniem.
+      </div>
+      <p>
+        Współczesne frameworki PHP, takie jak <strong>Laravel</strong> czy <strong>Symfony</strong>, oferują zaawansowane mechanizmy obsługi formularzy, w tym automatyczną walidację, generowanie pól formularza oraz ochronę przed CSRF.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

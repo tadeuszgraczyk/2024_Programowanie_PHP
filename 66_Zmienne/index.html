@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title><!DOCTYPE html>
+      <html lang="pl">
+      <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Materiały dydaktyczne - Zmienne w języku PHP</title>
+  <!-- Bootstrap 5 CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+  <style>
+    .card {
+      margin-bottom: 20px;
+      border-left: 4px solid #0d6efd;
+    }
+    .card-header {
+      background-color: #f8f9fa;
+      font-weight: bold;
+    }
+    pre {
+      background-color: #f5f5f5;
+      padding: 10px;
+      border-radius: 4px;
+      overflow-x: auto;
+    }
+    table {
+      width: 100%;
+      margin: 15px 0;
+    }
+    table th, table td {
+      padding: 8px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+  </style>
+</head>
+<body>
+<div class="container mt-4">
+  <!-- Temat: Zmienne w języku PHP -->
+  <div class="card">
+    <div class="card-header">
+      48a. Zmienne w języku PHP
+    </div>
+    <div class="card-body">
+      <p>
+        Zmienne w języku PHP służą do przechowywania danych, które mogą być używane i modyfikowane w trakcie wykonywania skryptu. PHP jest językiem słabo typowanym, co oznacza, że nie musisz deklarować typu zmiennej – typ jest określany automatycznie na podstawie przypisanej wartości.
+      </p>
+
+      <h5 class="mt-3">Deklaracja zmiennych:</h5>
+      <p>
+        W PHP wszystkie zmienne zaczynają się od znaku dolara (<code>$</code>), po którym następuje nazwa zmiennej. Nazwa zmiennej może zawierać litery, cyfry oraz znak podkreślenia (<code>_</code>), ale nie może zaczynać się od cyfry.
+      </p>
+      <pre><code class="language-php">&lt;?php
+    $nazwaZmiennej = "wartość";
+    $liczba = 42;
+    $cena = 19.99;
+    $czyAktywny = true;
+?&gt;</code></pre>
+
+      <h5 class="mt-3">Zasady nazewnictwa zmiennych:</h5>
+      <ul>
+        <li>Nazwa zmiennej musi zaczynać się od litery lub znaku podkreślenia (<code>_</code>).</li>
+        <li>Nazwa zmiennej nie może zaczynać się od cyfry.</li>
+        <li>Nazwa zmiennej może zawierać litery, cyfry i znaki podkreślenia.</li>
+        <li>Nazwa zmiennej jest wrażliwa na wielkość liter (<code>$zmienna</code> i <code>$Zmienna</code> to dwie różne zmienne).</li>
+      </ul>
+
+      <h5 class="mt-3">Przykłady poprawnych i niepoprawnych nazw zmiennych:</h5>
+      <table class="table table-bordered">
+        <thead>
+        <tr>
+          <th>Poprawne nazwy</th>
+          <th>Niepoprawne nazwy</th>
+        </tr>
+        </thead>
+        <tbody>
+        <tr>
+          <td><code>$nazwa</code></td>
+          <td><code>$1nazwa</code></td>
+        </tr>
+        <tr>
+          <td><code>$nazwa_zmiennej</code></td>
+          <td><code>$nazwa-zmiennej</code></td>
+        </tr>
+        <tr>
+          <td><code>$_nazwa</code></td>
+          <td><code>$nazwa zmiennej</code></td>
+        </tr>
+        <tr>
+          <td><code>$nazwa123</code></td>
+          <td><code>$nazwa@zmiennej</code></td>
+        </tr>
+        </tbody>
+      </table>
+
+      <h5 class="mt-3">Zakres zmiennych:</h5>
+      <p>
+        Zakres zmiennej określa, w jakich częściach skryptu zmienna jest dostępna. W PHP zmienne mogą mieć zakres:
+      </p>
+      <ul>
+        <li><strong>Lokalny:</strong> Zmienna jest dostępna tylko w obrębie funkcji, w której została zadeklarowana.</li>
+        <li><strong>Globalny:</strong> Zmienna jest dostępna w całym skrypcie, poza funkcjami.</li>
+        <li><strong>Statyczny:</strong> Zmienna zachowuje swoją wartość pomiędzy wywołaniami funkcji.</li>
+      </ul>
+
+      <pre><code class="language-php">&lt;?php
+    $globalnaZmienna = "Jestem globalna"; // Zmienna globalna
+
+    function przykladZakresu() {
+        global $globalnaZmienna; // Odwołanie do zmiennej globalnej
+        echo $globalnaZmienna . "&lt;br&gt;";
+
+        $lokalnaZmienna = "Jestem lokalna"; // Zmienna lokalna
+        echo $lokalnaZmienna . "&lt;br&gt;";
+
+        static $statycznaZmienna = 0; // Zmienna statyczna
+        $statycznaZmienna++;
+        echo "Statyczna zmienna: " . $statycznaZmienna . "&lt;br&gt;";
+    }
+
+    przykladZakresu();
+    przykladZakresu(); // Statyczna zmienna zachowa swoją wartość
+?&gt;</code></pre>
+
+      <h5 class="mt-3">Stałe:</h5>
+      <p>
+        W PHP można również definiować stałe, które w przeciwieństwie do zmiennych, nie mogą być modyfikowane po zadeklarowaniu. Stałe definiuje się za pomocą funkcji <code>define()</code> lub słowa kluczowego <code>const</code>.
+      </p>
+      <pre><code class="language-php">&lt;?php
+    define("NAZWA_STALEJ", "Wartość stałej");
+    const PI = 3.14;
+
+    echo NAZWA_STALEJ; // Wartość stałej
+    echo "&lt;br&gt;PI: " . PI;
+?&gt;</code></pre>
+
+      <div class="alert alert-info">
+        <strong>Wskazówka:</strong> Używaj stałych do przechowywania wartości, które nie powinny być modyfikowane w trakcie wykonywania skryptu, np. konfiguracji aplikacji.
+      </div>
+
+      <h5 class="mt-3">Podsumowanie:</h5>
+      <p>
+        Zmienne są fundamentalnym elementem programowania w PHP. Poprawne używanie zmiennych oraz zrozumienie ich zakresu i typów danych pozwala na efektywne tworzenie dynamicznych aplikacji internetowych.
+      </p>
+    </div>
+  </div>
+</div>
+
+<!-- Bootstrap 5 JS -->
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html></title>
+</head>
+<body>
+
+</body>
+</html>
