@@ -371,7 +371,7 @@ Instrukcja switch 6.32
 --------------------------------------------------------------
   <?php
 	$kolor = "red";
-	echo "Tak działa instrukcja  <b>switch</b> <br/>";
+	echo "Tak działa instrukcja  <b>switch</b> <br>";
 	switch ($kolor)
 	 {
 	   case "red"   : echo "Dominuje czerwień"; break;
@@ -385,7 +385,7 @@ Instrukcja switch 6.32
 Operator warunkowy 6.33
 -----------------------------------------------------------
   <?php
-	echo "Tak działa  <b>operator warunkowy</b> <br/>";
+	echo "Tak działa  <b>operator warunkowy</b> <br>";
 	$x = -12;
 	$wynik = ($x < 0) ? "ujemna" : "dodatnia";
 	echo "Wartość zmiennej x jest $wynik.";
@@ -395,7 +395,7 @@ Pętla for 6.34
 -------------------------------------------------------------
 <?php
  for($i=1; $i<=5; $i++)
-     echo "Pętla wykonana $i raz/y <br/>";
+     echo "Pętla wykonana $i raz/y <br>";
 ?>
 
 Pętla while 6.34
@@ -404,7 +404,7 @@ Pętla while 6.34
  $i=0;
  while ($i++ <5)
  {
-     echo "Pętla wykonana $i raz/y <br/>";
+     echo "Pętla wykonana $i raz/y <br>";
  }
 ?>
 
@@ -414,7 +414,7 @@ Pętla do...while 6.36
     $i=1;
     do
     {
-        echo "Pętla wykonana $i raz/y <br/>";
+        echo "Pętla wykonana $i raz/y <br>";
     }
     while ($i++<5);
 ?>
@@ -430,12 +430,12 @@ Pętla foreach 6.37 i 6.38
     );
     foreach($tab as $x)
     {
-        echo "$x <br/>";
+        echo "$x <br>";
     }
-    echo "------------------<br/>";
+    echo "------------------<br>";
     foreach($tab as $k1 =>$x)
     {
-        echo "tab[$k1]=$x <br/>";
+        echo "tab[$k1]=$x <br>";
     }
 ?>
 
@@ -445,7 +445,7 @@ Instrukcja break 6.39
     $i=0;
     while(true)
     {
-        echo ("Wypisz $i <br/>");
+        echo ("Wypisz $i <br>");
         if ($i>=20) break;
         $i++;
     }
@@ -528,7 +528,7 @@ Zmienne globalne 6.45
         $zm=1;
         function pokaz()
         {
-            echo "Wartość zmiennej \$zm wynosi $zm. <br/> ";
+            echo "Wartość zmiennej \$zm wynosi $zm. <br> ";
         }
         pokaz();
 ?>
@@ -540,7 +540,7 @@ Instrukcja global 6.46
         function pokaz()
         {
             global $zm;
-            echo "Wartość zmiennej \$zm wynosi $zm<br/>";
+            echo "Wartość zmiennej \$zm wynosi $zm<br>";
         }
         pokaz();
 ?>
@@ -553,7 +553,7 @@ Tablica $GLOBALS 6.47
         {
             echo "Wartość zmiennej \$zm wynosi ";
             echo $GLOBALS['zm'];
-            echo ".<br/>";
+            echo ".<br>";
         }
         pokaz();
 ?>
@@ -565,7 +565,7 @@ Zmienna lokalna 6.48
         {
             $tx="Tekst1";
         }
-        echo "Tekst zapisany w zmiennej to: $tx .<br/>";
+        echo "Tekst zapisany w zmiennej to: $tx .<br>";
 ?>
 
 Zmienne statyczne 6.49
@@ -574,7 +574,7 @@ Zmienne statyczne 6.49
         function funk()
         {
             $i=1;
-            echo "Funkcja wywołana $i raz(y) <br/>";
+            echo "Funkcja wywołana $i raz(y) <br>";
             $i++;
         }
         funk();
@@ -589,7 +589,7 @@ Zmienna statyczna 6.50
         function funk()
         {
             static $i=1;
-            echo "Funkcja wywołana $i raz(y) <br/>";
+            echo "Funkcja wywołana $i raz(y) <br>";
             $i++;
         }
         funk();
@@ -608,9 +608,9 @@ Argumenty przekazywane przez wartość 6.51
             $liczba+=3;
         }
         $liczba=2;
-        echo "Wartość zmiennej \$liczba przed wywołaniem funkcji: $liczba <br/>";
+        echo "Wartość zmiennej \$liczba przed wywołaniem funkcji: $liczba <br>";
         wart($liczba);
-        echo "Wrtość zmiennej \$liczba po wywołaniu funkcji: $liczba <br/>";
+        echo "Wrtość zmiennej \$liczba po wywołaniu funkcji: $liczba <br>";
 ?>
 
 Argumenty przekazywane za pomocą referencji 6.52
@@ -621,9 +621,9 @@ Argumenty przekazywane za pomocą referencji 6.52
         $liczba+=3;
     }
     $liczba=2;
-    echo "Wartość zmiennej \$liczba przed wywołaniem funkcji: $liczba <br/>";
+    echo "Wartość zmiennej \$liczba przed wywołaniem funkcji: $liczba <br>";
     wart($liczba);
-    echo "Wartość zmiennej \$liczba po wywołaniu funkcji: $liczba <br/>";
+    echo "Wartość zmiennej \$liczba po wywołaniu funkcji: $liczba <br>";
 ?>
 
 
@@ -649,9 +649,9 @@ Przykład 6.54
     {
         echo "<p style=\"color: $kolor\">".$tekst."<p/>";
     }
-    styl("Tytuł <br/>","blue");
-    styl("Rozdział 1 <br/>","green");
-    styl("Treść <br/>");
+    styl("Tytuł <br>","blue");
+    styl("Rozdział 1 <br>","green");
+    styl("Treść <br>");
 ?>
 
 6.8 Funkcje wbudowane /215
@@ -674,13 +674,13 @@ Przykład 6.56
 
 <?php
     $tab = array(3, 2, 5, 7, 9, 0, 1, 4);
-    echo "Zawartość tablicy przed sortowaniem: <br/>";
+    echo "Zawartość tablicy przed sortowaniem: <br>";
     foreach($tab as $x)
     {
         echo "$x ";
     }
     sort($tab);
-    echo "<br/>Zawartość tablicy po sortowaniu: <br/>";
+    echo "<br>Zawartość tablicy po sortowaniu: <br>";
     foreach($tab as $x)
     {
         echo "$x ";
@@ -714,13 +714,13 @@ w tablicy.
 ------------------------------------------------------
 <?php
     $tab = array(3, 5, 5, 7, 9, 3, 1, 7);
-    echo "Zawartość tablicy przed sortowaniem: <br/>";
+    echo "Zawartość tablicy przed sortowaniem: <br>";
     foreach($tab as $x)
     {
         echo "$x ";
     }
     sort($tab);
-    echo "<br/>Zawartość tablicy po sortowaniu: <br/>";
+    echo "<br>Zawartość tablicy po sortowaniu: <br>";
     foreach($tab as $x)
     {
         echo "$x ";
@@ -762,12 +762,12 @@ Funkcja date() 6.59/str. 220
 -----------------------------
 <?php
 	//formatowanie w odpowiedni sposób daty i czasu
-    echo date("Y-m-d") . "<br/>";
-    echo date("d-m-Y") . "<br/>";
-    echo date("G:i:s") . "<br/>";
-    echo date("H-i-sa") . "<br/>";
-    echo date("Y-m-d") . "<br/>";
-    echo date("Y-m-d G:i:s") . "<br/>";
+    echo date("Y-m-d") . "<br>";
+    echo date("d-m-Y") . "<br>";
+    echo date("G:i:s") . "<br>";
+    echo date("H-i-sa") . "<br>";
+    echo date("Y-m-d") . "<br>";
+    echo date("Y-m-d G:i:s") . "<br>";
 ?>
 
 Funkcja mktime() 6.60
@@ -791,9 +791,9 @@ Dziś mają tu przyjść barbarzyńcy.
 Dlaczego taka bezczynność w senacie?
 Senatorowie siedzą - czemuż praw nie uchwalą?
 TX;
-    echo "<b>Tekst przed użyciem funkcji nl2br():</b><br/>";
-    echo $tekst."<br/><br/>";
-    echo "<b>Tekst po użyciu funkcji nl2br(): <br/><br/>";
+    echo "<b>Tekst przed użyciem funkcji nl2br():</b><br>";
+    echo $tekst."<br><br>";
+    echo "<b>Tekst po użyciu funkcji nl2br(): <br><br>";
     echo nl2br($tekst);
 ?>
 
@@ -1092,7 +1092,7 @@ if (isSet($_POST['komentarz']))
 <body>
    <div>
        <form action="skrypt1.php" method="post">
-           <p><b>Dodaj swój komentarz na temat globalnego ocieplenia</b><br/>
+           <p><b>Dodaj swój komentarz na temat globalnego ocieplenia</b><br>
            (maksymalnie 255 znaków).</p>
            <textarea name="komentarz"  cols="50" rows="6" wrap="virtual"></textarea><br>
            <input type="submit" value="Wyślij">
@@ -1550,10 +1550,10 @@ Zgłaszanie wyjątków 6.95 / 259
  }
 
  catch (Exception $e) {
-	 echo "Problem w kodzie: ".$e->getCode()."<br/>";
-	 echo "Treść komunikatu: ".$e->getMessage()."<br/>";
-	 echo "W pliku: ".$e->getFile()."<br/>";
-	 echo "W wierszu".$e->getLine()."<br/>";
+	 echo "Problem w kodzie: ".$e->getCode()."<br>";
+	 echo "Treść komunikatu: ".$e->getMessage()."<br>";
+	 echo "W pliku: ".$e->getFile()."<br>";
+	 echo "W wierszu".$e->getLine()."<br>";
  }
 ?>
 
@@ -1613,7 +1613,7 @@ skript_form.php
  echo "<b>".$_POST['adres']."</b><br>";
 
 if(!isSet($_POST['wyksztalcenie']))
-    echo "<br/> Proszę wybrać <b>wykształcenie</b>";
+    echo "<br> Proszę wybrać <b>wykształcenie</b>";
 else
     echo "Zostało wybrane wykształcenie: {$_POST['wyksztalcenie']}.";
 
@@ -1632,7 +1632,7 @@ _______________________________________
 
 <?php
 if(!isSet($_POST['wyksztalcenie'])) {
-    echo "<br/> Proszę wpisać <b>wykształcenie</b>";
+    echo "<br> Proszę wpisać <b>wykształcenie</b>";
 else
     echo "Zostało wybrane wykształcenie: {$_POST['wyksztalcenie']}.";
 }
@@ -2125,7 +2125,7 @@ Zadanie z czytaniem z pliku na różne sposoby
 		<?php
 		$fp=fopen("napisy.txt","r");
 		$tekst = fread($fp,10);
-              echo "Oto odczytana zawartość <br/>";
+              echo "Oto odczytana zawartość <br>";
 			  echo $tekst;
 		fclose($fp);
 			  echo "<br>Teraz całość pliku <br>";
@@ -2186,17 +2186,17 @@ Dane czytane z formularza:
    <form action="index.php" method="post">
        Podaj liczbe 1:
        <input type="text" name="liczba1"/>
-       <br/><br/>
+       <br><br>
        Podaj liczbe 2:
        <input type="text" name="liczba2"/>
-       <br/><br/>
+       <br><br>
        <input type="submit" value="Wykonaj"/>
    </form>
    <?php
      $liczba1=$_POST['liczba1'];
      $liczba2=$_POST['liczba2'];
-      echo "Liczba1=".$liczba1."<br/>";
-      echo "Liczba2=".$liczba2."<br/>";
+      echo "Liczba1=".$liczba1."<br>";
+      echo "Liczba2=".$liczba2."<br>";
 
     ?>
 
@@ -2222,10 +2222,10 @@ ___________________________________________________________
    <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
        Podaj liczbe a:
        <input type="text" name="liczba_a"/>
-       <br/><br/>
+       <br><br>
        Podaj liczbe b:
        <input type="text" name="liczba_b"/>
-       <br/><br/>
+       <br><br>
        <input type="submit" value="Wykonaj"/>
    </form>
 
@@ -2235,19 +2235,19 @@ ___________________________________________________________
      $a = $_POST['liczba_a'];
      $b = $_POST['liczba_b'];
       echo "<br><br><br>";
-      echo "a=".$a."<br/>";
-      echo "b=".$b."<br/>";
-      echo "a+b=".($a+$b)."<br/>";
-      echo "a-b=".($a-$b)."<br/>";
-      echo "a*b=".($a*$b)."<br/>";
+      echo "a=".$a."<br>";
+      echo "b=".$b."<br>";
+      echo "a+b=".($a+$b)."<br>";
+      echo "a-b=".($a-$b)."<br>";
+      echo "a*b=".($a*$b)."<br>";
       if ($b!=0)
         {
-        echo "a/b=".($a/$b)."<br/>";
-        echo "a%b=".$a%$b."<br/>";
+        echo "a/b=".($a/$b)."<br>";
+        echo "a%b=".$a%$b."<br>";
         }
       else
-        echo "nie dziele przez 0<br/>";
-        echo "a<sup>b</sup>=".pow($a,$b)."<br/>";
+        echo "nie dziele przez 0<br>";
+        echo "a<sup>b</sup>=".pow($a,$b)."<br>";
    }
     ?>
 </body>
@@ -2277,10 +2277,10 @@ body {
    <form  action="<?php echo $_SERVER['PHP_SELF']; ?>" method="post">
        Podaj liczbe a:
        <input type="text" name="liczba_a"/>
-       <br/><br/>
+       <br><br>
        Podaj liczbe b:
        <input type="text" name="liczba_b"/>
-       <br/><br/>
+       <br><br>
        <input type="submit" value="Wykonaj"/>
    </form>
 
