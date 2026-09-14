@@ -635,9 +635,9 @@ Domyślne argumenty funkcji 6.53
         return "Język programowania $jezyk";
     }
     echo progr();
-    echo "<br />";
+    echo "<br>";
     echo progr(null);
-    echo "<br />";
+    echo "<br>";
     echo progr("JAVA");
 
 ?>
@@ -2057,10 +2057,10 @@ _____________
 	<form action="order.php" method="post">
 		Ile pączków (0.99 PLN/szt):
 		<input type="text" name="paczkow" />
-			<br /><br />
+			<br><br>
 		Ile grzebieni (1.29 PLN/szt):
 		<input type="text" name="grzebieni" />
-			<br /><br />
+			<br><br>
 		<input type="submit" value="Wyślij zamówienie" />
 	</form>
 
@@ -2100,7 +2100,7 @@ echo<<<END
 		<td>SUMA</td> <td>$suma PLN</td>
 	</tr>
 	</table>
-	<br /><a href="index.php">Powrót do strony głównej</a>
+	<br><a href="index.php">Powrót do strony głównej</a>
 
 END;
 
@@ -2294,15 +2294,15 @@ body {
         //iloczyn bitowy AND
         echo "Wynikiem działania $arg1 & $arg2 jest ";
         echo $arg1 & $arg2;
-        echo ".<br />";
+        echo ".<br>";
         //suma bitowa OR
         echo "Wynikiem działania $arg1 | $arg2 jest ";
         echo $arg1 | $arg2;
-        echo ".<br />";
+        echo ".<br>";
         //bitowa różnica symetryczna XOR
         echo "Wynikiem działania $arg1 ^ $arg2 jest ";
         echo $arg1 ^ $arg2;
-        echo ".<br />";
+        echo ".<br>";
 
     }
 
@@ -2323,8 +2323,8 @@ $B = 1;
 $C = -2;
 
 //wyświetlenie parametrów równania
-echo "Parametry równania: <br />";
-echo "A = $A, B = $B, C = $C <br />";
+echo "Parametry równania: <br>";
+echo "A = $A, B = $B, C = $C <br>";
 
 //sprawdzenie, czy jest to równanie kwadratowe
 if ($A == 0){
@@ -2339,7 +2339,7 @@ else{
 
   //jeśli delta mniejsza od zera
   if ($delta < 0){
-     echo "Delta < 0 <br />";
+     echo "Delta < 0 <br>";
      echo "To równanie nie ma rozwiązania w zbiorze liczb rzeczywistych!";
   }
   //jeśli delta większa lub równa zero
