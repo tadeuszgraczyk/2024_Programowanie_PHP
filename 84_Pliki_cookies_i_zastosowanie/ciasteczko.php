@@ -21,4 +21,4 @@ if (isset($_COOKIE['name'])) {
 }
 
 // Usunięcie ciasteczka
-setcookie('name', '', time() - 86400);
+//setcookie('name', '', time() - 86400);
