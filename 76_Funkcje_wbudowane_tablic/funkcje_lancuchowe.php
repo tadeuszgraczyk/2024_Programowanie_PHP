@@ -15,7 +15,10 @@ echo "Znaki UTF-8: " . mb_strlen("żółć") . "<br>";              // 4 (strlen
 
 // strtolower() / strtoupper() – zmiana wielkości liter
 echo strtolower("WIELKIE LITERY") . "<br>";                     // wielkie litery
-echo strtoupper("małe litery") . "<br>";                        // MAŁE LITERY
+echo strtoupper("małe litery") . "<br>";                        // MAłE LITERY - problem znaków
+
+echo mb_strtolower("małe litery", "UTF-8") . "<br>";
+echo mb_strtoupper("zażółć gęślą jaźń", "UTF-8") . "<br>";
 
 // mb_strtolower() / mb_strtoupper() – wersje wielobajtowe
 echo mb_strtoupper("żółw") . "<br>";                            // ŻÓŁW
