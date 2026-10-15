@@ -2,17 +2,17 @@
 $dbServer = 'localhost';
 $dbUser = 'root';
 $dbPassword = '';
-$dbName = 'kurs_php7';
+$dbName = 'medica';
 
-$mysqli = new mysqli($dbServer,$dbUser,$dbPassword,$dbName);
-if(mysqli_connect_errno()){
-	echo 'Błąd bazy danych';
+$mysqli = new mysqli($dbServer, $dbUser, $dbPassword, $dbName);
+if (mysqli_connect_errno()) {
+    echo 'Błąd bazy danych';
 }
 ?>
-// w html
-<?php include('db_connect.php'); 
-$result = $mysqli->query("SELECT * FROM articles order by id");
-while($article = mysqli_fetch_array($result) ){
-print_r($article);
+    // w html
+<?php
+$result = $mysqli->query("SELECT opis FROM abonamenty order by id");
+while ($article = mysqli_fetch_array($result)) {
+    print_r($article);
 }
 ?>
