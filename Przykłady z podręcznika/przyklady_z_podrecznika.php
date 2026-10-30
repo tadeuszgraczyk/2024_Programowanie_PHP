@@ -1510,7 +1510,7 @@ plik: index.php
 	  $przycisk3=new Przyciski();
       $przycisk3->pozycja_y='100';
       $przycisk3->napis='Odsyłacz do strony szkoły :) ';
-      $przycisk3->adres='http://zszglogow.pl';
+      $przycisk3->adres='https://zspglogow.pl';
       $przycisk3->szerokosc='400';
       $przycisk3->kolor='blue';
       $przycisk3->wyswietl();
